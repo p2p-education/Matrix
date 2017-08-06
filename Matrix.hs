@@ -19,15 +19,15 @@ len_row x = maximum $ map length x
 len_col x = length x
 instance (Num a) => Num (Mat a) where
     (Mat a) + (Mat b) =
-        let m = max (len_row a) (len_row b) in
-        let n = max (len_col a) (len_col b) in
+        let m = max(len_row a)(len_row b) in
+        let n = max(len_col a)(len_col b) in
         Mat [
                 [ (a!!i!!j) + (b!!i!!j) | j <- [0..(n-1)]] 
                 | i <- [0..(m-1)]
             ]
     (Mat a) - (Mat b) =
-        let m = max (len_row a) (len_row b) in
-        let n = max (len_col a) (len_col b) in
+        let m = max(len_row a)(len_row b) in
+        let n = max(len_col a)(len_col b) in
         Mat [
                 [ (a!!i!!j) - (b!!i!!j) | j <- [0..(n-1)]] 
                 | i <- [0..(m-1)]
