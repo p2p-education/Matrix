@@ -42,3 +42,10 @@ instance (Num a) => Num (Mat a) where
             ]
 
 
+transpose (Mat a) = 
+        let m = len_row a in
+        let n = len_col a in
+        Mat [
+                [ (a!!j!!i) | j <- [0..(n-1)]] 
+                | i <- [0..(m-1)]
+            ]
