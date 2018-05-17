@@ -9,9 +9,9 @@ import Matrix
 
 -- the Matrix is like
 
--- [x]   [0 0 1][x]
--- [y] = [1 0 0][y]
--- [z]   [0 1 0][z]
+--                   [0 0 1]   
+-- [x'y'z'] = [x y z][1 0 0]   
+--                   [0 1 0]   
 
 -- here x,y or z axis implies each axis of 3 180˚rotations 
 -----------------------------------------------------------
